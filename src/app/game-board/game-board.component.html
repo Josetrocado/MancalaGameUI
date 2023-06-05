@@ -1,0 +1,29 @@
+<div class="game-board">
+    <div>
+        <button (click)="getBoard()">Get Board</button>
+        <p> () = Store House </p>
+        <p> Player Two houses <-- 6-1 </p>
+        <p> Player One houses --> 1-6 </p>
+    </div>
+
+    <p>Player {{playerNumber}} turn </p>
+
+    <pre class="game-board">
+      {{ gameString }}
+    </pre>
+
+    <div>
+      <p>Player One</p>
+      <input type="number" #playerOneValue placeholder="Select House" min="1" max="6" style="width: 100px;">
+    </div>
+    <br>
+    <button #buttonOne (click)="makeMove(playerOneValue.value,'ONE')">Play</button>
+
+    <div>
+      <p>Player Two</p>
+        <input type="number" #playerTwoValue placeholder="Select House" min="1" max="6" style="width: 100px;">
+    </div>
+    <br>
+    <button #buttonTwo (click)="makeMove(playerTwoValue.value,'TWO')">Play</button>
+</div>
+  
